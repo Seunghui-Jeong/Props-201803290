@@ -1,20 +1,68 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {Button, View, ScrollView, StyleSheet } from "react-native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+const App = () => {
+  return (<>
+    <View style={[stlyes.container, styles.playingSpace]}>
+      
     </View>
-  );
+    <ScrollView style={[stlyes.container, styles.controlSpace]}>
+      <View style={[style.buttonView]}>
+        <Button title="1"/>
+      </View>
+      <View style={[style.buttonView]}>
+        <Button title="2"/>
+      </View>
+      <View style={[style.buttonView]}>
+        <Button title="3"/>
+      </View>
+      <View style={[style.buttonView]}>
+        <Button title="4"/>
+      </View>
+      <View style={[style.buttonView]}>
+        <Button title="5"/>
+      </View>
+      <View style={[style.buttonView]}>
+        </ScrollView>><Button title="1"/></View>
+
+
+      </ScrollView>
+  
+  </>);
 }
 
-const styles = StyleSheet.create({
+const stlyes = StyleSheet.Creat({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: '50%'
   },
-});
+  playingSpace : {
+    backgroudColor: 'white',
+    borderColor: 'blue',
+    borderWidth: 3
+
+  },
+  controlSpace: {
+    backgroudColor: '#A5A5A5'
+
+  }
+})
+  export default App;
+
+
+
+
+
+
+
+
+  controlSpace: {
+    backgroundColor: '#A5A5A5',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+
+  buttonView: {
+
+    width:'50%',
+    padding:10
+  }
